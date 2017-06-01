@@ -8,7 +8,6 @@ public abstract class GuiBase extends GuiScreen {
 	}
 	
 	public abstract boolean doesGuiPauseGame();
-	public abstract void buildGui();
 	public abstract void initGui();
 
 	@Override

@@ -1,5 +1,8 @@
 package com.gunmetal.smalladditions.gui;
 
+import com.gunmetal.smalladditions.gui.addbook.AddBookGui;
+import com.gunmetal.smalladditions.gui.addbook.UpdateNewsGui;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.IGuiHandler;
@@ -20,7 +23,7 @@ public class SAGUIManager implements IGuiHandler {
         	return new AddBookGui();
         	
         case 1:
-        	return null;
+        	return new UpdateNewsGui();
         	
         case 2:
         	return null;

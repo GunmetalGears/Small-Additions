@@ -1,5 +1,7 @@
-package com.gunmetal.smalladditions.gui;
+package com.gunmetal.smalladditions.gui.addbook;
 
+import com.gunmetal.smalladditions.Main;
+import com.gunmetal.smalladditions.gui.GuiBase;
 import com.gunmetal.smalladditions.util.Constants;
 
 import net.minecraft.client.gui.GuiButton;
@@ -19,10 +21,11 @@ public class AddBookGui extends GuiBase {
 	
 	@Override
 	public void initGui() {
-		int centerX = (this.width - 256) / 2;
-		int centerY = (this.height - 256) / 2;
 		this.buttonList.clear();
-		this.buttonList.add(new GuiButton(0, centerX, centerY - 100, 180, 20, "ButtonText"));
+		this.buttonList.add(new GuiButton(0, 256, 100, 180, 20, "Update News"));
+		this.buttonList.add(new GuiButton(1, 256, 150, 180, 20, "Natural Creations"));
+		this.buttonList.add(new GuiButton(2, 256, 200, 180, 20, "Simple Constructions"));
+		this.buttonList.add(new GuiButton(3, 256, 250, 180, 20, "Advanced Constructs"));
 	}
 	
 	@Override
@@ -39,16 +42,13 @@ public class AddBookGui extends GuiBase {
 		super.drawScreen(0, 0, TICKS);
 		this.mc.displayGuiScreen(this);
 	}
-
-	@Override
-	public void buildGui() {
-		// TODO 
-	}
 	
-	public void buttonPressed(GuiButton button) {
+	@Override
+	public void actionPerformed(GuiButton button) {
 		switch (button.id) {
-		case 0:
-			
+		case 0: //update news
+			this.mc.thePlayer.closeScreen();
+			this.mc.thePlayer.openGui(Main.instance, 1, this.mc.theWorld, 0, 0, 0);
 		case 1:
 			//do something with button id 1 here
 		case 2:

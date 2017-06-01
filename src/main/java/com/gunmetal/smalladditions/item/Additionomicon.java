@@ -1,7 +1,7 @@
 package com.gunmetal.smalladditions.item;
 
 import com.gunmetal.smalladditions.Main;
-import com.gunmetal.smalladditions.gui.AddBookGui;
+import com.gunmetal.smalladditions.gui.addbook.AddBookGui;
 import com.gunmetal.smalladditions.util.Constants;
 
 import net.minecraft.entity.player.EntityPlayer;
