@@ -48,7 +48,7 @@ public class AddBookGui extends GuiBase {
 		switch (button.id) {
 		case 0: //update news
 			this.mc.thePlayer.closeScreen();
-			this.mc.thePlayer.openGui(Main.instance, 1, this.mc.theWorld, 0, 0, 0);
+			this.mc.thePlayer.openGui(Main.instance, 1, mc.theWorld, 0, 0, 0);
 		case 1:
 			//do something with button id 1 here
 		case 2:
