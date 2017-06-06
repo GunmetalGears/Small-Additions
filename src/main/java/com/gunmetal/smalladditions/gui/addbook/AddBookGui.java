@@ -15,6 +15,8 @@ public class AddBookGui extends GuiBase {
 	
 	public static final float TICKS = 0.0F;
 	public static final int WHITE = 16777215;
+	//public final int centerX = this.mc.displayWidth / 2;
+	//public final int centerY = this.mc.displayHeight / 2;
 	
 	public AddBookGui() {
 	}
@@ -47,8 +49,9 @@ public class AddBookGui extends GuiBase {
 	public void actionPerformed(GuiButton button) {
 		switch (button.id) {
 		case 0: //update news
+			//this.mc.thePlayer.openGui(Main.instance, 1, mc.theWorld, 0, 0, 0);
 			this.mc.thePlayer.closeScreen();
-			this.mc.thePlayer.openGui(Main.instance, 1, mc.theWorld, 0, 0, 0);
+			//this.mc.thePlayer.openGui(Main.instance, 1, mc.theWorld, 0, 0, 0);
 		case 1:
 			//do something with button id 1 here
 		case 2:

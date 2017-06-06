@@ -21,7 +21,7 @@ public class UpdateNewsGui extends AddBookGui {
 		
 		this.mc.renderEngine.bindTexture(new ResourceLocation(Constants.MODID + ":" + "textures/gui/addbook.png"));
 		drawTexturedModalRect(centerX, centerY, 0, 0, 256, 256); 
-		this.drawCenteredString(mc.fontRendererObj, "Update News", centerX + 128, centerY + 16, WHITE);		
+		this.drawCenteredString(mc.fontRendererObj, "Update News", centerX + 128, centerY + 50, WHITE);		
 		
 		
 		super.drawScreen(0, 0, TICKS);

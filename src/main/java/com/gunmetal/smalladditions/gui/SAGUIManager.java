@@ -21,7 +21,6 @@ public class SAGUIManager implements IGuiHandler {
         switch (ID) {
         case 0:
         	return new AddBookGui();
-        	
         case 1:
         	return new UpdateNewsGui();
         	
