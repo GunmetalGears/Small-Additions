@@ -1,6 +1,5 @@
 package com.gunmetal.smalladditions.gui.addbook;
 
-import com.gunmetal.smalladditions.Main;
 import com.gunmetal.smalladditions.gui.GuiBase;
 import com.gunmetal.smalladditions.util.Constants;
 
@@ -38,26 +37,16 @@ public class AddBookGui extends GuiBase {
 		this.drawDefaultBackground();
 		this.mc.renderEngine.bindTexture(new ResourceLocation(Constants.MODID + ":" + "textures/gui/addbook.png"));
 		drawTexturedModalRect(centerX, centerY, 0, 0, 256, 256); 
-		this.drawCenteredString(mc.fontRendererObj, "Additionomicon", centerX + 128, centerY + 16, WHITE);		
-		
-		
+		this.drawCenteredString(mc.fontRendererObj, "Additionomicon", centerX + 128, centerY + 16, WHITE);				
 		super.drawScreen(0, 0, TICKS);
-		this.mc.displayGuiScreen(this);
 	}
 	
 	@Override
 	public void actionPerformed(GuiButton button) {
 		switch (button.id) {
-		case 0: //update news
-			//this.mc.thePlayer.openGui(Main.instance, 1, mc.theWorld, 0, 0, 0);
-			this.mc.thePlayer.closeScreen();
-			//this.mc.thePlayer.openGui(Main.instance, 1, mc.theWorld, 0, 0, 0);
-		case 1:
-			//do something with button id 1 here
-		case 2:
-			//button 2
-		case 3: 
-			//etc...
+		case 0: 
+			this.mc.displayGuiScreen(new UpdateNewsGui());
+			break;
 		}
 	}
 	
