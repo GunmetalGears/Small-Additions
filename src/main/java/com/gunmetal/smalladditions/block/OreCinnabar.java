@@ -11,10 +11,21 @@ import net.minecraft.util.EnumBlockRenderType;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+/** This class defines a basic block. <br>
+ *  Its methods are used for gameplay physics and rendering purposes. <br>
+ *  All of the Override annotations just mean that the methods *must* override something, else they cause a runtime error. <br>
+ *  The SideOnly annotations are flags to the compiler for where the code should be run. <br>
+ *  Client-side code, if it were run on a server, would cause crashes, and vice versa. <br>
+ *  <br> 
+ *  If you need comments to understand what the methods in this class do, please refer to GrassyStone.java. It has all the same methods, and they are documented there.
+ * @author Lucas Crow / Gunmetal_Gears
+ */
 public class OreCinnabar extends Block {
 	
 	public static final String NAME = "orecinnabar";
 	
+	/** Defines some basic properties of the Block. <br>
+	 *  This includes setting the sound type (stone, in this case), block hardness (how difficult it is to mine), and resistance (how much explosive force is required to break it).*/
 	public OreCinnabar( ) {
 		super(Material.ROCK);
 		this.blockSoundType = SoundType.STONE;
@@ -44,11 +55,4 @@ public class OreCinnabar extends Block {
 	public EnumBlockRenderType getRenderType(IBlockState iBlockState) { 
 		return EnumBlockRenderType.MODEL;
 	}
-	
-	public String getName() { //getter method for this block's name
-		return NAME;
-	}
-	
-	
-
 }
